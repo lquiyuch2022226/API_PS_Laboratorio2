@@ -3,7 +3,7 @@ const { check } = require('express-validator');
 
 const { validarCampos, validarJWT, esAdminRole, tieneRolAutorizado } = require('../middlewares');
 
-const {  existenteEmail, existeAlumnoById} = require('../helpers/db-validators');
+const {  existenteEmail, existeAlumnoById, esCursoValido} = require('../helpers/db-validators');
 
 const {
     alumnoPost,
@@ -23,6 +23,7 @@ router.post(
         check("password", "La contraseña debe ser mayor a 5 caracteres").not().isEmpty(),
         check("correo", "Debe de ser un correo valido").isEmail(),
         check("correo").custom(existenteEmail),
+        check("cursos").custom(esCursoValido),
         validarCampos
     ], alumnoPost);
 
