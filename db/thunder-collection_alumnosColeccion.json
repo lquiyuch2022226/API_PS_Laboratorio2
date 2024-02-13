@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "alumnosColeccion",
+    "dateExported": "2024-02-13T23:27:13.994Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f1f053d8-fc6a-410f-9776-ac80f7a54be5",
+            "colId": "16438ae1-ef08-4128-9d73-cd629cfd10f0",
+            "containerId": "",
+            "name": "post alumno",
+            "url": "http://localhost:3000/api/alumnos/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-13T20:45:54.329Z",
+            "modified": "2024-02-13T23:17:41.804Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"alumno002\",\n  \"correo\": \"alumno003@gmail.com\",\n  \"password\": \"123456\",\n  \"cursos\": [\"Mate\", \"Sociales\", \"Mate\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4f994e82-93d7-44d7-9626-c9dadd0ae3d1",
+            "colId": "16438ae1-ef08-4128-9d73-cd629cfd10f0",
+            "containerId": "",
+            "name": "get alumnos",
+            "url": "http://localhost:3000/api/alumnos/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-13T21:32:26.449Z",
+            "modified": "2024-02-13T21:58:21.936Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "189d7c6e-5772-42d8-9d14-352b63ff7c7d",
+            "colId": "16438ae1-ef08-4128-9d73-cd629cfd10f0",
+            "containerId": "",
+            "name": "get alumnosById",
+            "url": "http://localhost:3000/api/alumnos/65cbdf76bf2329efe073cc79",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-13T21:49:09.639Z",
+            "modified": "2024-02-13T22:35:43.413Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f85de437-ffa4-4619-b4c4-722bb7e97996",
+            "colId": "16438ae1-ef08-4128-9d73-cd629cfd10f0",
+            "containerId": "",
+            "name": "put alumno",
+            "url": "http://localhost:3000/api/alumnos/65cbdf76bf2329efe073cc79",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-13T22:14:36.220Z",
+            "modified": "2024-02-13T22:48:27.717Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"alumnoPut03\",\n  \"password\": \"123456\",\n  \"cursos\": [\"Socio\", \"Ciencias\", \"Matema\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f58c8df1-1cd8-44b2-90bb-277b27183ac9",
+            "colId": "16438ae1-ef08-4128-9d73-cd629cfd10f0",
+            "containerId": "",
+            "name": "delete alumno",
+            "url": "http://localhost:3000/api/alumnos/65cbef7b132c70fec9d3aa8a",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-13T22:48:56.814Z",
+            "modified": "2024-02-13T23:02:55.350Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
