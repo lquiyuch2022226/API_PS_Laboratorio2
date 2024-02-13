@@ -7,7 +7,8 @@ const AlumnoSchema = Schema({
     },
     correo:{
         type: String,
-        required: [true, 'El correo es obligatorio']
+        required: [true, 'El correo es obligatorio'],
+        unique: true
     },
     password:{
         type: String,
@@ -21,23 +22,15 @@ const AlumnoSchema = Schema({
         type: Boolean,
         default: true
     },
-    curso_1:{
-        type: String,
-        default: 'No asignado'
-    },
-    curso_2:{
-        type: String,
-        default: 'No asignado'
-    },
-    curso_3:{
-        type: String,
-        default: 'No asignado'
+    cursos:{
+        type: [String],
+        default: ['No asignado', 'No asignado', 'No asignado']
     }
 });
 
 AlumnoSchema.methods.toJSON = function(){
-    const{ password, _id, ...alumno} = this.toObject();
-    usuario.aId = _id;
+    const{ __v,password, _id, ...alumno} = this.toObject();
+    alumno.aId = _id;
     return alumno;
 };
 

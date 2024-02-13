@@ -3,8 +3,8 @@ const Alumno = require('../models/alumnos');
 const { response, request } = require('express');
 
 const alumnoPost = async (req, res) =>{
-    const {nombre, correo, password, curso_1, curso_2, curso_3} = req.body;
-    const alumno = new Alumno({nombre, correo, password, curso_1, curso_2, curso_3});
+    const {nombre, correo, password, cursos} = req.body;
+    const alumno = new Alumno({nombre, correo, password, cursos});
 
     const salt = bcryptjs.genSaltSync();
     alumno.password = bcryptjs.hashSync(password, salt);
@@ -20,8 +20,8 @@ const alumnosGet = async (req = request, res = response) => {
     const query = {estado: true};
 
     const [total, alumnos] = await Promise.all([
-        Usuario.countDocuments(query),
-        Usuario.find(query)
+        Alumno.countDocuments(query),
+        Alumno.find(query)
         .skip(Number(desde))
         .limit(Number(limite))
     ]);
@@ -43,20 +43,18 @@ const alumnoGetById = async (req, res) =>{
 
 const alumnoPut = async (req, res) =>{
     const { id } = req.params;
-    const {_id, correo, role, ...resto } = req.body;
+    const {_id, correo, password , role, ...resto } = req.body;
 
     if(password){
         const salt = bcryptjs.genSaltSync();
         resto.password = bcryptjs.hashSync(password, salt);
     }
 
-    await Alumno.findByIdAndUpdate(id, resto);
+    const alumnoActualizado = await Alumno.findByIdAndUpdate(id, resto, { new: true });
 
-    const alumno = Alumno.findOne({id});
-
-    res.status(200).json({
+    res.status(202).json({
         msg: 'Este alumno fue actualizado',
-        alumno
+        alumnoActualizado
     });
 }
 
