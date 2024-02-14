@@ -13,12 +13,13 @@ const validarJWT = async (req = request, res = response, next) => {
 
 
     try {
-        const { aId } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-        const alumno = await Alumno.findById(aId);
+        const { aid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
+        const alumno = await Alumno.findById(aid);
 
         if(!alumno){
             return res.status(401).json({
-                msg: 'Alumno no existe en la base de datos :('
+                msg: 'Alumno no existe en la base de datos :(',
+                alumno
             });
         }
 

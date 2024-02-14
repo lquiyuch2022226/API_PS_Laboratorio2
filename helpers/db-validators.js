@@ -1,4 +1,4 @@
-const Alumno = require('../models/alumnos');
+const Alumno = require('../models/alumno');
 const Cursos = require('../models/cursos');
 
 const existenteEmail = async (correo = '') => {

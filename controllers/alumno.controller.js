@@ -1,5 +1,5 @@
 const bcryptjs = require('bcryptjs');
-const Alumno = require('../models/alumnos');
+const Alumno = require('../models/alumno');
 const { response, request } = require('express');
 
 const alumnoPost = async (req, res) =>{

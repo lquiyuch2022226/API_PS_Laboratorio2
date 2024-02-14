@@ -9,15 +9,15 @@ const loginAlumno = async (req = request, res = response) => {
     try {
         const alumno = await Alumno.findOne({correo});
 
-        if(!usuario){
+        if(!alumno){
             return res.status(400).json({
                 msg: 'Credenciales incorrectas, el correo no existe en la base de datos.'
             });
         }
 
-        if(!usuario.estado){
+        if(!alumno.estado){
             return res.status(400).json({
-                msg: 'El usuario no existe en la base de datos (eliminado)'
+                msg: 'El alumno no existe en la base de datos (eliminado)'
             });
         }
 
