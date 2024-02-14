@@ -24,7 +24,7 @@ const AlumnoSchema = Schema({
     },
     cursos:{
         type: [String],
-        default: ['No asignado', 'No asignado', 'No asignado']
+        default: ['Todavía no hay un curso asignado']
     }
 });
 
