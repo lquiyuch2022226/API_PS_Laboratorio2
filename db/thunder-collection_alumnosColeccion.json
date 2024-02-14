@@ -1,67 +1,72 @@
 {
     "client": "Thunder Client",
     "collectionName": "alumnosColeccion",
-    "dateExported": "2024-02-14T14:33:18.724Z",
+    "dateExported": "2024-02-14T23:25:19.606Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "28c02fed-52e1-4e0e-b601-470692568a33",
-            "colId": "975ab706-883f-40a3-a655-37fb2ab3edc4",
+            "_id": "6103a7cb-d66c-4fb5-ae3e-493a1c6bc054",
+            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
             "containerId": "",
             "name": "post alumno",
             "url": "http://localhost:3000/api/alumnos/",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-14T04:35:17.012Z",
-            "modified": "2024-02-14T14:04:43.526Z",
-            "headers": [],
+            "created": "2024-02-14T19:04:41.473Z",
+            "modified": "2024-02-14T22:16:39.737Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWNiZjY4NjIzYTdkYTcyMmY1ZTAxMDgiLCJpYXQiOjE3MDc5Mzc1MTgsImV4cCI6MTcwNzk0NDcxOH0.ZHxpfEv52oqnOKD_NFQCaqtyXtJ4HYYI2iO5k7IJNyo"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"alumno17\",\n  \"correo\": \"alumno17@gmail.com\",\n  \"password\": \"123456\",\n  \"cursos\": [\"Mate\", \"Fifu\", \"Sociales\"]\n}",
+                "raw": "{\n  \"nombre\": \"alumno26\",\n  \"correo\": \"alumno30@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"XD\",\n  \"cursos\": [\"Mate\", \"Palma\", \"Sociales\"]\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "eaf6bcde-624f-4ffc-a094-61cc3766ac74",
-            "colId": "975ab706-883f-40a3-a655-37fb2ab3edc4",
+            "_id": "27cdc127-b268-4283-973b-ae73a03039bc",
+            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
             "containerId": "",
             "name": "get alumnos",
             "url": "http://localhost:3000/api/alumnos/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-14T04:35:17.013Z",
-            "modified": "2024-02-14T04:35:17.013Z",
+            "created": "2024-02-14T19:04:41.474Z",
+            "modified": "2024-02-14T19:04:41.474Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "c7e7afdb-540d-4a07-bd80-06be4bde22b5",
-            "colId": "975ab706-883f-40a3-a655-37fb2ab3edc4",
+            "_id": "afd9901d-5933-40ff-88e8-76ecb9f2e0a2",
+            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
             "containerId": "",
             "name": "get alumnosById",
-            "url": "http://localhost:3000/api/alumnos/65cc4ae8eecff42353424d05",
+            "url": "http://localhost:3000/api/alumnos/65cbf6ad23a7da722f5e0112",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-14T04:35:17.014Z",
-            "modified": "2024-02-14T05:15:43.571Z",
+            "created": "2024-02-14T19:04:41.475Z",
+            "modified": "2024-02-14T22:18:38.573Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "afb2d635-3fe8-4906-94f0-e4d4fd992f07",
-            "colId": "975ab706-883f-40a3-a655-37fb2ab3edc4",
+            "_id": "43781fec-5132-4879-818f-75d2b309b727",
+            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
             "containerId": "",
             "name": "put alumno",
             "url": "http://localhost:3000/api/alumnos/65cc4ae8eecff42353424d05",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-02-14T04:35:17.015Z",
-            "modified": "2024-02-14T05:22:03.927Z",
+            "created": "2024-02-14T19:04:41.476Z",
+            "modified": "2024-02-14T19:04:41.476Z",
             "headers": [],
             "params": [],
             "body": {
@@ -72,15 +77,15 @@
             "tests": []
         },
         {
-            "_id": "8d829379-94a1-48f3-b8bc-261114a5a875",
-            "colId": "975ab706-883f-40a3-a655-37fb2ab3edc4",
+            "_id": "aec65474-e78c-419b-98b7-72dc46adbc12",
+            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
             "containerId": "",
             "name": "delete alumno",
             "url": "http://localhost:3000/api/alumnos/65cc433487a952e1f2c7af89",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-02-14T04:35:17.016Z",
-            "modified": "2024-02-14T14:30:49.489Z",
+            "created": "2024-02-14T19:04:41.477Z",
+            "modified": "2024-02-14T19:04:41.477Z",
             "headers": [
                 {
                     "name": "x-token",

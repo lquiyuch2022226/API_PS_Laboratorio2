@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "profesorColeccion",
+    "dateExported": "2024-02-14T23:25:04.175Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3749cd65-be7b-434b-89a2-3f0ef59b5fa9",
+            "colId": "2de045bc-fd89-4a19-a95e-8a8292344e0c",
+            "containerId": "",
+            "name": "post profesor",
+            "url": "http://localhost:3000/api/profesores/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-14T20:24:13.455Z",
+            "modified": "2024-02-14T20:44:21.636Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"profesor3\",\n  \"correo\": \"profesor3@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"XD\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6901852-a04b-4fbe-a146-30af667170c9",
+            "colId": "2de045bc-fd89-4a19-a95e-8a8292344e0c",
+            "containerId": "",
+            "name": "get profesores",
+            "url": "http://localhost:3000/api/profesores/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-14T20:36:00.537Z",
+            "modified": "2024-02-14T20:36:06.948Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f77b22d7-8a29-4953-ac0d-1637795eacfe",
+            "colId": "2de045bc-fd89-4a19-a95e-8a8292344e0c",
+            "containerId": "",
+            "name": "get profesoresById",
+            "url": "http://localhost:3000/api/profesores/65cd23af6352ced389c48f0e",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-14T20:46:48.498Z",
+            "modified": "2024-02-14T21:45:00.353Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0362ed3c-8a75-4c5a-b206-8fe636e3cc7b",
+            "colId": "2de045bc-fd89-4a19-a95e-8a8292344e0c",
+            "containerId": "",
+            "name": "put profesor",
+            "url": "http://localhost:3000/api/profesores/65cd23af6352ced389c48f0e",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-14T21:56:42.754Z",
+            "modified": "2024-02-14T21:57:16.884Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"profesorPut\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "33b60263-fdd1-4afc-8798-f09190e07857",
+            "colId": "2de045bc-fd89-4a19-a95e-8a8292344e0c",
+            "containerId": "",
+            "name": "delete profesor",
+            "url": "http://localhost:3000/api/profesores/65cd23d92a80d14648c99b95",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-02-14T21:57:34.706Z",
+            "modified": "2024-02-14T21:59:03.993Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
