@@ -18,8 +18,6 @@ const router = Router();
 router.post(
     "/",
     [
-        validarJWT,
-        tieneRolAutorizado('STUDENT_ROLE'),
         check("nombre", "El nombre no puede estar vacío").not().isEmpty(),
         check("password", "La contraseña no puede estar vacía").not().isEmpty(),
         check("correo", "El correo no puede estar vacío"),
