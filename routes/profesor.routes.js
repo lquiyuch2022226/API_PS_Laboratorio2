@@ -3,15 +3,15 @@ const { check } = require('express-validator');
 
 const { validarCampos, validarJWT, tieneRolAutorizado } = require('../middlewares');
 
-const { existenteEmail, existeAlumnoById, esCursoValido, cursoRepetido, maximoTresCursos } = require('../helpers/db-validators');
+const { existenteEmailProfesor, existeProfesorById, cursoRepetido } = require('../helpers/db-validators');
 
 const {
-    alumnoPost,
-    alumnosGet,
-    alumnoGetById,
-    alumnoPut,
-    alumnoDelete
-} = require('../controllers/alumno.controller');
+    profesorPost,
+    profesorGet,
+    getProfesorById,
+    profesorPut,
+    profesorDelete
+} = require('../controllers/profesor.controller');
 
 const router = Router();
 
@@ -23,46 +23,41 @@ router.post(
         check("correo", "El correo no puede estar vacío"),
         check("password", "La contraseña debe ser mayor a 5 caracteres").isLength({min:5}),
         check("correo", "Debe de ser un correo valido").isEmail(),
-        check("correo").custom(existenteEmail),
-        check("cursos").custom(esCursoValido),
+        check("correo").custom(existenteEmailProfesor),
         check("cursos").custom(cursoRepetido),
-        check("cursos").custom(maximoTresCursos),
         validarCampos
-    ], alumnoPost);
+    ], profesorPost);
 
-router.get("/", alumnosGet);
+router.get("/", profesorGet);
 
 router.get(
     "/:id",
     [
         check('id', 'No es un id valido').isMongoId(),
-        check('id').custom(existeAlumnoById),
+        check('id').custom(existeProfesorById),
         validarCampos
-    ], alumnoGetById);
+    ], getProfesorById);
 
 router.put(
     "/:id",
     [
-        validarJWT,
-        tieneRolAutorizado('STUDENT_ROLE'),
+        /*validarJWT,
+        tieneRolAutorizado('TEACHER_ROLE'),*/
         check('id', 'No es un id valido').isMongoId(),
-        check('id').custom(existeAlumnoById),
-        check("cursos").custom(esCursoValido),
-        check("cursos").custom(cursoRepetido),
-        check("cursos").custom(maximoTresCursos),
+        check('id').custom(existeProfesorById),
+        check('cursos').custom(cursoRepetido),
         validarCampos
-    ], alumnoPut);
+    ], profesorPut);
 
 router.delete(
     "/:id",
     [
-        validarJWT,
-        tieneRolAutorizado('STUDENT_ROLE'),
+        /*validarJWT,
+        tieneRolAutorizado('TEACHER_ROLE'),*/
         check('id', 'No es un id valido').isMongoId(),
-        check('id').custom(existeAlumnoById),
+        check('id').custom(existeProfesorById),
         validarCampos
-    ], alumnoDelete);
+    ], profesorDelete);
 
 module.exports = router;
-
 
