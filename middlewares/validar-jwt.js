@@ -6,7 +6,7 @@ const { request, response } = require('express');
 const validarJWT = async (req = request, res = response, next) => {
     const token = req.header('x-token');
 
-    if(!token){
+    if (!token) {
         return res.status(401).json({
             msg: 'No hay token en la petición'
         });
@@ -15,9 +15,10 @@ const validarJWT = async (req = request, res = response, next) => {
 
     try {
         const { aid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-        let usuario = await Profesor.findById(aid);
+        let usuario = await Alumno.findById(aid);
 
-        if(!usuario){
+        if (!usuario) {
+            usuario = await Profesor.findById(aid);
             if (!usuario) {
                 return res.status(400).json({
                     aid,
@@ -26,8 +27,9 @@ const validarJWT = async (req = request, res = response, next) => {
                 });
             }
         }
+        console.log(usuario);
 
-        if(!usuario.estado){
+        if (!usuario.estado) {
             return res.status(401).json({
                 msg: 'Token no valido, este usuario fue eliminado (estado false)'
             });

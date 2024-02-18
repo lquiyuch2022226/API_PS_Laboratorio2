@@ -47,12 +47,23 @@ const alumnosGet = async (req, res) => {
 
 const alumnoGetById = async (req, res) => {
     const { id } = req.params;
-    const alumno = await Alumno.findOne({ _id: id });
+    const alumno = await Alumno.findOne({ _id: id })
+        .populate({
+            path: 'cursos',
+            select: 'nombreCurso estado',
+            transform: doc => {
+                if (doc.estado) {
+                    return { nombreCurso: doc.nombreCurso };
+                } else {
+                    return { nombreCurso: 'Curso no asignado' };
+                }
+            }
+        });
 
     res.status(200).json({
         alumno
     });
-}
+};
 
 const alumnoPut = async (req, res) => {
     const { id } = req.params;

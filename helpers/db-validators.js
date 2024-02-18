@@ -1,6 +1,7 @@
 const Alumno = require('../models/alumno');
 const Cursos = require('../models/curso');
 const Profesor = require('../models/profesor')
+const mongoose = require('mongoose');
 
 // Alumnos
 const existenteEmail = async (correo = '') => {
@@ -34,14 +35,18 @@ const existeProfesorById = async (id = '') => {
 
 // Cursos
 const esCursoValido = async (cursos = []) => {
-    for (const nombreCurso of cursos) {
-        const cursoExistente = await Cursos.findOne({ nombreCurso: nombreCurso });
+    for (const id of cursos) {
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            throw new Error(`El id '${id}'  no es un Id válido`);
+        }
+
+        const cursoExistente = await Cursos.findOne({ _id: id });
 
         if (!cursoExistente) {
-            throw new Error(`El curso ${nombreCurso} no existe en la base de datos`);
+            throw new Error(`El curso con el id: ${id} no existe en la base de datos`);
         }
     }
-}
+};
 
 const cursoRepetido = async (cursos = []) => {
     const cursosIngresados = new Set(cursos);
@@ -56,24 +61,6 @@ const maximoTresCursos = async (cursos = []) => {
         throw new Error(`El máximo de cursos son 3, por favor elimine los cursos extra`);
     }
 }
-
-const buscarCursoByName = async ([curso]) =>{
-    if (curso.length == 0) {
-    }
-
-    if(curso.length !== 0) {
-        for (const nombreCurso of curso) {
-            const cursoExistente = await Cursos.findOne({ nombreCurso: nombreCurso });
-    
-            if (!cursoExistente) {
-                throw new Error(`El curso ${nombreCurso} no existe en la base de datos`);
-            }
-        }
-
-        return
-    }
-}
-
 
 
 module.exports = {
