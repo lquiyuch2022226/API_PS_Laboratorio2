@@ -25,7 +25,7 @@ const cursosGet = async (req, res) => {
     try {
         const { aid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
 
-        const query = {profesorId: aid };
+        const query = {estado: true, profesorId: aid };
 
         const [total, cursos] = await Promise.all([
             Curso.countDocuments(query),

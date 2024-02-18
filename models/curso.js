@@ -7,9 +7,14 @@ const CursosSchema = Schema ({
     },
     descripcion:{
         type: String,
+        default: 'No se ha agregado una descripción'
     },
     profesorId:{
         type: String
+    },
+    estado:{
+        type: Boolean,
+        default: true
     }
 
 

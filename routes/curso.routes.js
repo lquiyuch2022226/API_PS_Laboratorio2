@@ -37,7 +37,7 @@ router.put(
         validarJWT,
         tieneRolAutorizado('TEACHER_ROLE'),
         check('id', 'No es un id valido').isMongoId(),
-        check('id').custom(existeProfesorById),
+        //check('id').custom(existeProfesorById),
         check('cursos').custom(cursoRepetido),
         validarCampos
     ], cursoPut);
@@ -48,7 +48,7 @@ router.delete(
         validarJWT,
         tieneRolAutorizado('TEACHER_ROLE'),
         check('id', 'No es un id valido').isMongoId(),
-        check('id').custom(existeProfesorById),
+        //check('id').custom(existeProfesorById),
         validarCampos
     ], cursoDelete);
 
