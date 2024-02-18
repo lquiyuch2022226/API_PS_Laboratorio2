@@ -1,0 +1,95 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "cursoColeccion",
+    "dateExported": "2024-02-18T22:23:12.569Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c6cf40ee-0e42-4324-9a38-1800b3450886",
+            "colId": "bdd4c7e9-7125-48a3-b7fa-84c564dcaf05",
+            "containerId": "",
+            "name": "post curso",
+            "url": "http://localhost:3000/api/cursos/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-18T06:18:00.311Z",
+            "modified": "2024-02-18T21:57:12.906Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQxYmYxNjUxYmYzMjU2ZjU1NThlODYiLCJpYXQiOjE3MDgyOTM0MjQsImV4cCI6MTcwODMwMDYyNH0.DXhwr7XkDLwUMhyGa_A9m5vZYz_zM_3jMZLIay4MWws"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCurso\": \"Taller II\",\n  \"descripcion\": \"Implementación de proyectos y actividades que enfoquen al estudiante a un ambiente práctico de la programación\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "abe0ad4b-3bf3-4186-8ea2-4ebc2bea04ed",
+            "colId": "bdd4c7e9-7125-48a3-b7fa-84c564dcaf05",
+            "containerId": "",
+            "name": "get curso",
+            "url": "http://localhost:3000/api/cursos/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-18T08:55:56.668Z",
+            "modified": "2024-02-18T21:35:16.612Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQxYmYxNjUxYmYzMjU2ZjU1NThlODYiLCJpYXQiOjE3MDgyOTIwODksImV4cCI6MTcwODI5OTI4OX0.FFk5hKrdkLQ7PW4oV2cuzpR9FnK2ME3LRDPixPRVq3E"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6690c189-0a08-41f2-98e5-e45b6133417a",
+            "colId": "bdd4c7e9-7125-48a3-b7fa-84c564dcaf05",
+            "containerId": "",
+            "name": "put curso",
+            "url": "http://localhost:3000/api/cursos/65d25c1d01aa5187f57d8dce",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-18T09:26:09.440Z",
+            "modified": "2024-02-18T22:21:30.960Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQxYmYxNjUxYmYzMjU2ZjU1NThlODYiLCJpYXQiOjE3MDgyOTEwOTksImV4cCI6MTcwODI5ODI5OX0.JrJOZ4VIXZqQJj1xbb5LKks7dmAQRt9uc5lGCywMf-0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCurso\": \"Sociales\",\n  \"descripcion\": \"Ciencia social que se encarga del análisis científico de la sociedad humana o población regional.\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8972175f-04cb-4d79-93c6-d1abb72848c7",
+            "colId": "bdd4c7e9-7125-48a3-b7fa-84c564dcaf05",
+            "containerId": "",
+            "name": "delte curso",
+            "url": "http://localhost:3000/api/cursos/65d25c1d01aa5187f57d8dce",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-18T09:26:26.049Z",
+            "modified": "2024-02-18T22:21:41.835Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQxYmYxNjUxYmYzMjU2ZjU1NThlODYiLCJpYXQiOjE3MDgyOTEwOTksImV4cCI6MTcwODI5ODI5OX0.JrJOZ4VIXZqQJj1xbb5LKks7dmAQRt9uc5lGCywMf-0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
