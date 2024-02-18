@@ -70,6 +70,7 @@ const profesorDelete = async(req,res)=>{
     });
 }
 
+
 module.exports = {
     profesorPost,
     profesorGet,

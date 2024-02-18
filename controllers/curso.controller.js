@@ -1,5 +1,5 @@
 const Curso = require('../models/curso');
-const Profesor = require('../models/profesor');
+const Alumno = require('../models/alumno');
 const jwt = require('jsonwebtoken');
 
 const { response, request } = require('express');
@@ -53,11 +53,31 @@ const cursoPut = async (req, res) =>{
 
     const cursoActualizado = await Curso.findByIdAndUpdate(id, resto, {new:true});
 
+    await putCursosAlumnos(id, cursoActualizado._id);
+
     res.status(202).json({
         msg: 'Este Curso fue actualizado',
         cursoActualizado
     });
 }
+
+
+const putCursosAlumnos = async (cursoAnteriorId, nuevoCursoId) => {
+    try {
+        // Actualizar los cursos de los alumnos que tenían el curso anterior
+        await Alumno.updateMany(
+            { cursos: cursoAnteriorId },
+            { $set: { "cursos.$[elemento]": nuevoCursoId } },
+            { arrayFilters: [{ "elemento": cursoAnteriorId }] }
+        );
+
+        console.log('Cursos actualizados en los alumnos correctamente.');
+        return true; // Indica que la actualización fue exitosa
+    } catch (error) {
+        console.error('Error al actualizar cursos en los alumnos:', error);
+        throw error;
+    }
+};
 
 const cursoDelete = async(req,res)=>{
     const {id} = req.params;
@@ -75,5 +95,6 @@ module.exports = {
     cursoPost,
     cursosGet,
     cursoPut,
-    cursoDelete
+    cursoDelete,
+    putCursosAlumnos
 }

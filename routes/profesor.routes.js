@@ -10,7 +10,7 @@ const {
     profesorGet,
     getProfesorById,
     profesorPut,
-    profesorDelete
+    profesorDelete,
 } = require('../controllers/profesor.controller');
 
 const router = Router();
