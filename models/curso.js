@@ -9,8 +9,7 @@ const CursosSchema = Schema ({
         type: String,
     },
     profesorId:{
-        type: String,
-        required: [true, 'El id del profesor que lo creo es obligatorio']
+        type: String
     }
 
 

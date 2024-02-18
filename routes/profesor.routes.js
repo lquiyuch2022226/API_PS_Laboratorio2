@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 
-const { validarCampos, validarJWT, tieneRolAutorizado } = require('../middlewares');
+const { validarCampos, validarJWT, tieneRolAutorizado, esProfesorRole } = require('../middlewares');
 
 const { existenteEmailProfesor, existeProfesorById, cursoRepetido } = require('../helpers/db-validators');
 
@@ -41,8 +41,8 @@ router.get(
 router.put(
     "/:id",
     [
-        /*validarJWT,
-        tieneRolAutorizado('TEACHER_ROLE'),*/
+        validarJWT,
+        tieneRolAutorizado('TEACHER_ROLE'),
         check('id', 'No es un id valido').isMongoId(),
         check('id').custom(existeProfesorById),
         check('cursos').custom(cursoRepetido),
@@ -52,8 +52,8 @@ router.put(
 router.delete(
     "/:id",
     [
-        /*validarJWT,
-        tieneRolAutorizado('TEACHER_ROLE'),*/
+        validarJWT,
+        tieneRolAutorizado('TEACHER_ROLE'),
         check('id', 'No es un id valido').isMongoId(),
         check('id').custom(existeProfesorById),
         validarCampos
