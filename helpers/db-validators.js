@@ -70,5 +70,5 @@ module.exports = {
     cursoRepetido,
     maximoTresCursos,
     existeProfesorById,
-    existenteEmailProfesor
+    existenteEmailProfesor,
 }

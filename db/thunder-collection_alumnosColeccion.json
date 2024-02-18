@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "alumnosColeccion",
-    "dateExported": "2024-02-14T23:25:19.606Z",
+    "dateExported": "2024-02-18T22:23:07.033Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "6103a7cb-d66c-4fb5-ae3e-493a1c6bc054",
-            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
+            "_id": "0fab6ae8-3b51-4c55-b5fd-8f217532c007",
+            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
             "containerId": "",
             "name": "post alumno",
             "url": "http://localhost:3000/api/alumnos/",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-14T19:04:41.473Z",
-            "modified": "2024-02-14T22:16:39.737Z",
+            "created": "2024-02-18T06:26:10.586Z",
+            "modified": "2024-02-18T22:20:36.363Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -24,74 +24,93 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"alumno26\",\n  \"correo\": \"alumno30@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"XD\",\n  \"cursos\": [\"Mate\", \"Palma\", \"Sociales\"]\n}",
+                "raw": "{\n  \"nombre\": \"alumno1\",\n  \"correo\": \"alumno1@gmail.com\",\n  \"password\": \"123456\",\n  \"cursos\": [\"65d25c1d01aa5187f57d8dce\", \"65d2742348e3ba1f65b1b42d\"]\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "27cdc127-b268-4283-973b-ae73a03039bc",
-            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
+            "_id": "f6a8264a-e5ad-481c-81b7-6dbdb8a8ebe2",
+            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
             "containerId": "",
             "name": "get alumnos",
             "url": "http://localhost:3000/api/alumnos/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-14T19:04:41.474Z",
-            "modified": "2024-02-14T19:04:41.474Z",
+            "created": "2024-02-18T06:26:10.588Z",
+            "modified": "2024-02-18T06:26:10.588Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "afd9901d-5933-40ff-88e8-76ecb9f2e0a2",
-            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
+            "_id": "b45841ad-aa81-487e-aa82-f779c2d1ffa3",
+            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
             "containerId": "",
             "name": "get alumnosById",
-            "url": "http://localhost:3000/api/alumnos/65cbf6ad23a7da722f5e0112",
+            "url": "http://localhost:3000/api/alumnos/65d2748f48e3ba1f65b1b438",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-14T19:04:41.475Z",
-            "modified": "2024-02-14T22:18:38.573Z",
+            "created": "2024-02-18T06:26:10.589Z",
+            "modified": "2024-02-18T21:21:38.559Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "43781fec-5132-4879-818f-75d2b309b727",
-            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
+            "_id": "7c930f7e-e591-4dc8-b663-a07ff645b316",
+            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
             "containerId": "",
             "name": "put alumno",
-            "url": "http://localhost:3000/api/alumnos/65cc4ae8eecff42353424d05",
+            "url": "http://localhost:3000/api/alumnos/65d2725534b838d3c5c72b10",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-02-14T19:04:41.476Z",
-            "modified": "2024-02-14T19:04:41.476Z",
-            "headers": [],
+            "created": "2024-02-18T06:26:10.590Z",
+            "modified": "2024-02-18T21:54:19.900Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQyNWJjYzAxYWE1MTg3ZjU3ZDhkYzEiLCJpYXQiOjE3MDgyOTMyNDMsImV4cCI6MTcwODMwMDQ0M30.XsbQ5ND3jSdqqI3tQCJxjzwo3ZiUJA0-cn_dR6ybvmE"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"alumnoPut1\",\n  \"cursos\": [\"Sociales\", \"Taller\", \"Mate\"]\n}",
+                "raw": "{\n  \"nombre\": \"Alumno Put 3\",\n  \"cursos\": [\"65d25f6993b29d4da6797366\", \"65d25c1d01aa5187f57d8dce\", \"65d27658e28719d1e31f08b2\"]\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "aec65474-e78c-419b-98b7-72dc46adbc12",
-            "colId": "6f545054-4efa-4fbb-b704-05375c591a8c",
+            "_id": "c6221e3f-c5e8-411f-926a-efaf577fca2c",
+            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
             "containerId": "",
             "name": "delete alumno",
-            "url": "http://localhost:3000/api/alumnos/65cc433487a952e1f2c7af89",
+            "url": "http://localhost:3000/api/alumnos/65d2725534b838d3c5c72b10",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-02-14T19:04:41.477Z",
-            "modified": "2024-02-14T19:04:41.477Z",
+            "created": "2024-02-18T06:26:10.591Z",
+            "modified": "2024-02-18T21:54:56.187Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWNjNDM0Nzg3YTk1MmUxZjJjN2FmOTIiLCJpYXQiOjE3MDc5MjEwMzIsImV4cCI6MTcwNzkyODIzMn0.-lWa0s0epVNMHp2vV4Wndxw9V0pc30CcJ2Xe9wq8nCA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQyNWJjYzAxYWE1MTg3ZjU3ZDhkYzEiLCJpYXQiOjE3MDgyOTMyNDMsImV4cCI6MTcwODMwMDQ0M30.XsbQ5ND3jSdqqI3tQCJxjzwo3ZiUJA0-cn_dR6ybvmE"
                 }
             ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c5c70b70-560e-41a2-9a14-0cbf4402b9a6",
+            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "containerId": "",
+            "name": "get cursos",
+            "url": "http://localhost:3000/api/cursos/mostrarCursos",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-18T16:35:34.447Z",
+            "modified": "2024-02-18T16:39:50.754Z",
+            "headers": [],
             "params": [],
             "tests": []
         }
