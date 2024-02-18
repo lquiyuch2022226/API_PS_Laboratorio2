@@ -24,7 +24,7 @@ router.post(
         check("password", "La contraseña debe ser mayor a 5 caracteres").isLength({min:5}),
         check("correo", "Debe de ser un correo valido").isEmail(),
         check("correo").custom(existenteEmail),
-        check("cursos").custom(esCursoValido),
+        //check("cursos").custom(esCursoValido),
         check("cursos").custom(cursoRepetido),
         check("cursos").custom(maximoTresCursos),
         validarCampos

@@ -9,7 +9,8 @@ const {
     cursoPost,
     cursosGet,
     cursoPut,
-    cursoDelete
+    cursoDelete,
+    cursosGetForAlumno
 } = require('../controllers/curso.controller');
 
 const router = Router();
@@ -30,6 +31,8 @@ router.get("/",
         validarJWT,
         tieneRolAutorizado('TEACHER_ROLE'),
     ], cursosGet);
+
+router.get("/mostrarCursos", cursosGetForAlumno);
 
 router.put(
     "/:id",

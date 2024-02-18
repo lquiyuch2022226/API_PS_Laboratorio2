@@ -57,6 +57,25 @@ const maximoTresCursos = async (cursos = []) => {
     }
 }
 
+const buscarCursoByName = async ([curso]) =>{
+    if (curso.length == 0) {
+    }
+
+    if(curso.length !== 0) {
+        for (const nombreCurso of curso) {
+            const cursoExistente = await Cursos.findOne({ nombreCurso: nombreCurso });
+    
+            if (!cursoExistente) {
+                throw new Error(`El curso ${nombreCurso} no existe en la base de datos`);
+            }
+        }
+
+        return
+    }
+}
+
+
+
 module.exports = {
     existenteEmail,
     existeAlumnoById,

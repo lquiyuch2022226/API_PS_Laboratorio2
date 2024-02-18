@@ -23,7 +23,8 @@ const AlumnoSchema = Schema({
         default: true
     },
     cursos:{
-        type: [String],
+        type: [Schema.Types.ObjectId],
+        ref: 'Curso',
         default: ['Todavía no hay un curso asignado']
     }
 });

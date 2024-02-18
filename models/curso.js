@@ -16,8 +16,12 @@ const CursosSchema = Schema ({
         type: Boolean,
         default: true
     }
-
-
 });
 
-module.exports = model('Cursos', CursosSchema);
+CursosSchema.methods.toJSON = function(){
+    const{ __v,password, _id, profesorId, ...curso} = this.toObject();
+    curso.Id_del_Curso = _id;
+    return curso;
+};
+
+module.exports = model('Curso', CursosSchema);
