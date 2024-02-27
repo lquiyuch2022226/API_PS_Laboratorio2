@@ -35,15 +35,11 @@ const existeProfesorById = async (id = '') => {
 
 // Cursos
 const esCursoValido = async (cursos = []) => {
-    for (const id of cursos) {
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            throw new Error(`El id '${id}'  no es un Id válido`);
-        }
-
-        const cursoExistente = await Cursos.findOne({ _id: id });
-
+    for (const nombreCurso of cursos) {
+        const cursoExistente = await Cursos.findOne({ nombreCurso });
+ 
         if (!cursoExistente) {
-            throw new Error(`El curso con el id: ${id} no existe en la base de datos`);
+            throw new Error(`El curso '${nombreCurso}' no existe en la base de datos`);
         }
     }
 };

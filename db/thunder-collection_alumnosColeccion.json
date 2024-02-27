@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "alumnosColeccion",
-    "dateExported": "2024-02-18T22:23:07.033Z",
+    "dateExported": "2024-02-27T23:10:42.980Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "0fab6ae8-3b51-4c55-b5fd-8f217532c007",
-            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "_id": "9fdc9b2c-1d1c-4e6c-bb3b-659bd3d8d606",
+            "colId": "f2c3d5bb-2bfc-4026-bbc0-f3fe3ec38f24",
             "containerId": "",
             "name": "post alumno",
             "url": "http://localhost:3000/api/alumnos/",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-18T06:26:10.586Z",
-            "modified": "2024-02-18T22:20:36.363Z",
+            "created": "2024-02-27T22:29:58.690Z",
+            "modified": "2024-02-27T23:03:04.069Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -24,73 +24,73 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"alumno1\",\n  \"correo\": \"alumno1@gmail.com\",\n  \"password\": \"123456\",\n  \"cursos\": [\"65d25c1d01aa5187f57d8dce\", \"65d2742348e3ba1f65b1b42d\"]\n}",
+                "raw": "{\n  \"nombre\": \"alumno2\",\n  \"correo\": \"alumno2@gmail.com\",\n  \"password\": \"123456\",\n  \"cursos\": [\"Taller 1\"]\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "f6a8264a-e5ad-481c-81b7-6dbdb8a8ebe2",
-            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "_id": "51c2c305-f051-4113-b55d-a18e50788397",
+            "colId": "f2c3d5bb-2bfc-4026-bbc0-f3fe3ec38f24",
             "containerId": "",
             "name": "get alumnos",
             "url": "http://localhost:3000/api/alumnos/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-18T06:26:10.588Z",
-            "modified": "2024-02-18T06:26:10.588Z",
+            "created": "2024-02-27T22:29:58.691Z",
+            "modified": "2024-02-27T22:29:58.691Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "b45841ad-aa81-487e-aa82-f779c2d1ffa3",
-            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "_id": "de8c758a-1781-45e2-88bd-295b4953640d",
+            "colId": "f2c3d5bb-2bfc-4026-bbc0-f3fe3ec38f24",
             "containerId": "",
             "name": "get alumnosById",
-            "url": "http://localhost:3000/api/alumnos/65d2748f48e3ba1f65b1b438",
+            "url": "http://localhost:3000/api/alumnos/65de6a28cecdf6c484d3aa39",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-18T06:26:10.589Z",
-            "modified": "2024-02-18T21:21:38.559Z",
+            "created": "2024-02-27T22:29:58.692Z",
+            "modified": "2024-02-27T23:04:05.498Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "7c930f7e-e591-4dc8-b663-a07ff645b316",
-            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "_id": "d4a294e5-00ee-4b82-be0e-50dd09c4933e",
+            "colId": "f2c3d5bb-2bfc-4026-bbc0-f3fe3ec38f24",
             "containerId": "",
             "name": "put alumno",
-            "url": "http://localhost:3000/api/alumnos/65d2725534b838d3c5c72b10",
+            "url": "http://localhost:3000/api/alumnos/65de6a28cecdf6c484d3aa39",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-02-18T06:26:10.590Z",
-            "modified": "2024-02-18T21:54:19.900Z",
+            "created": "2024-02-27T22:29:58.693Z",
+            "modified": "2024-02-27T23:05:15.882Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWQyNWJjYzAxYWE1MTg3ZjU3ZDhkYzEiLCJpYXQiOjE3MDgyOTMyNDMsImV4cCI6MTcwODMwMDQ0M30.XsbQ5ND3jSdqqI3tQCJxjzwo3ZiUJA0-cn_dR6ybvmE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NWRlNjc4NDU5YmMzZmNhNTE0ZDhjYzQiLCJpYXQiOjE3MDkwNzUwNzksImV4cCI6MTcwOTA4MjI3OX0.z6UCvts-fvrE7aCdLAqVuPhJkyM0QaEkSgU6NfLZ64U"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Alumno Put 3\",\n  \"cursos\": [\"65d25f6993b29d4da6797366\", \"65d25c1d01aa5187f57d8dce\", \"65d27658e28719d1e31f08b2\"]\n}",
+                "raw": "{\n  \"nombre\": \"Alumno Put 3\",\n  \"cursos\": [\"Taller 1\", \"Taller 3\", \"Taller 4\"]\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "c6221e3f-c5e8-411f-926a-efaf577fca2c",
-            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "_id": "d034ff81-43b5-41e0-bedf-ea364893e06b",
+            "colId": "f2c3d5bb-2bfc-4026-bbc0-f3fe3ec38f24",
             "containerId": "",
             "name": "delete alumno",
             "url": "http://localhost:3000/api/alumnos/65d2725534b838d3c5c72b10",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-02-18T06:26:10.591Z",
-            "modified": "2024-02-18T21:54:56.187Z",
+            "created": "2024-02-27T22:29:58.694Z",
+            "modified": "2024-02-27T22:29:58.694Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -101,15 +101,15 @@
             "tests": []
         },
         {
-            "_id": "c5c70b70-560e-41a2-9a14-0cbf4402b9a6",
-            "colId": "42f0534d-70a7-4898-8447-66cd652ba89c",
+            "_id": "95b39e71-959a-42c4-b706-1b15cbf969c4",
+            "colId": "f2c3d5bb-2bfc-4026-bbc0-f3fe3ec38f24",
             "containerId": "",
             "name": "get cursos",
             "url": "http://localhost:3000/api/cursos/mostrarCursos",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2024-02-18T16:35:34.447Z",
-            "modified": "2024-02-18T16:39:50.754Z",
+            "created": "2024-02-27T22:29:58.695Z",
+            "modified": "2024-02-27T22:29:58.695Z",
             "headers": [],
             "params": [],
             "tests": []
